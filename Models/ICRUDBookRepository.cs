@@ -51,7 +51,7 @@ namespace eLibrary.Models
 
         public Book FindById(int id)
         {
-            context.Find(typeof(Book), id);
+           
             return context.Books.Find(id);
         }
 
@@ -65,9 +65,9 @@ namespace eLibrary.Models
 
         public void AddAuthorToBook(int authorId, int bookId)
         {
-            var author = context.Authors.Find(authorId);
+           
             var book = context.Books.Find(bookId);
-            book.Authors.Add(author);
+          
             Update(book);
         }
 

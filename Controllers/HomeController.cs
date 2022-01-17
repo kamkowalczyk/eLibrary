@@ -9,14 +9,16 @@ namespace eLibrary.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        
+         private ICRUDBookRepository _repository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ICRUDBookRepository repository)
         {
             _logger = logger;
+            _repository = repository;
+
         }
         
-       
+
 
         public IActionResult Index()
         {
@@ -28,6 +30,10 @@ namespace eLibrary.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        public IActionResult List()
+        {
+            return View(_repository.FindAll());
         }
     }
 }

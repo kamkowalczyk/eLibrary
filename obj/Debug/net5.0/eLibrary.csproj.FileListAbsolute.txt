@@ -245,3 +245,4 @@ C:\Users\Kamil\OneDrive\Pulpit\eLibrary\obj\Debug\net5.0\Razor\Views\Book\Confir
 C:\Users\Kamil\OneDrive\Pulpit\eLibrary\obj\Debug\net5.0\Razor\Views\Book\EditForm.cshtml.g.cs
 C:\Users\Kamil\OneDrive\Pulpit\eLibrary\obj\Debug\net5.0\Razor\Views\Book\Index.cshtml.g.cs
 C:\Users\Kamil\OneDrive\Pulpit\eLibrary\obj\Debug\net5.0\Razor\Views\Book\List.cshtml.g.cs
+C:\Users\Kamil\OneDrive\Pulpit\eLibrary\obj\Debug\net5.0\Razor\Views\Home\List.cshtml.g.cs

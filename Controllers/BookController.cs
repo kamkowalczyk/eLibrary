@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace eLibrary.Controllers
 {
- 
+
     public class BookController : Controller
     {
         private ICRUDBookRepository repository;
-        
+
 
         public BookController(ICRUDBookRepository repository)
         {
             this.repository = repository;
-           
+
         }
 
         public IActionResult Index()
@@ -61,11 +61,9 @@ namespace eLibrary.Controllers
         public IActionResult Edit(Book book)
         {
             repository.Update(book);
+          
             return View("List", repository.FindAll());
         }
-
-
-       
-    }
+    } 
 }
 

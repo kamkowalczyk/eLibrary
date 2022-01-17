@@ -4,27 +4,49 @@
 *@
 @{
 }
-<div class="container-fluid" m-3>
-    <h2>Wpisz dane kontaktu</h2>
+<div class="container-fluid">
+    <h2>Wpisz dane książki:</h2>
     <form asp-controller="Book" asp-action="Add" method="post">
-        <div class="mb-3">
+        <div class="form-group mb-3">
             <span asp-validation-for="Title" class="text-danger"></span>
-            <label asp-for="Title">Tytuł</label>
+            <label asp-for="Title">Tytuł:</label>
             <input class="form-control" asp-for="Title" />
         </div>
-        <div class="mb-3">
+        <div class="form-group mb-3">
             <span asp-validation-for="Authors" class="text-danger"></span>
-            <label asp-for="Authors">Autor</label>
+            <label asp-for="Authors">Autor:</label>
             <input class="form-control" asp-for="Authors" />
         </div>
-        <div class="mb-3">
+        <div class="form-group mb-3">
             <span asp-validation-for=" PublishingYear" class="text-danger"></span>
-            <label asp-for=" PublishingYear">Rok Wydania:</label>
+            <label asp-for=" PublishingYear">Rok wydania: </label>
             <input class="form-control" asp-for=" PublishingYear" />
         </div>
-        
+        <div class="form-group mb-3">
+            <span asp-validation-for=" ISBN" class="text-danger"></span>
+            <label asp-for=" ISBN">Numer ISBN:</label>
+            <input class="form-control" asp-for="ISBN" />
+        </div>
+        <div class="form-group mb-3">
+            <span asp-validation-for="Pages" class="text-danger"></span>
+            <label asp-for="Pages">Ilość stron:</label>
+            <input class="form-control" asp-for="Pages" />
+        </div>
+        <div class="form-group mb-3">
+            <span asp-validation-for="ImageUpload" class="text-danger"></span>
+            <label asp-for="Image">Okładka książki:</label>
+            <img src="" id="imgupload" alt="okładka książki"/>
+            <input class="form-control" asp-for="ImageUpload" />
+        </div>
+
         <div class="mb-3">
             <button class="btn btn-primary" type="submit">Zapisz</button>
         </div>
     </form>
+    <a class="btn btn-primary" asp-action="List" asp-controller="Book">Wróć do listy książek</a>
 </div>
+<script>
+    $("#ImagePreview").change(function () {
+        readURL(this);
+    });
+</script>

@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,24 +11,30 @@ namespace eLibrary.Models
 {
     public class Book
     {
-        public Book()
-        {
-            Authors = new HashSet<Author>();
-        }
-
+       
         [HiddenInput]
         public int Id { get; set; }
         [Required(ErrorMessage = "Musisz podać tytuł książki!")]
         [MinLength(2)]
         public string Title { get; set; }
         [Required(ErrorMessage = "Musisz podać  autora!")]
-        public ICollection<Author> Authors { get; set; }
-       
-        public int PublishingYear { get; set; }
+        public string Authors { get; set; }
+        [Required(ErrorMessage = "Musisz podać rok publikacji!")]
+        [DataType(DataType.Date)]
+        public DateTime PublishingYear { get; set; }
+        [Required(ErrorMessage = "Musisz numer ISBN!")]
+        [MinLength(13, ErrorMessage = "ISBN musi mieć 8 cyfr"), MaxLength(13, ErrorMessage = "ISBN musi mieć 8 cyfr")]
+        public string ISBN { get; set; }
+        [Required(ErrorMessage = "Musisz podać ilość stron!")]
+        public int Pages { get; set; }
+
+        public string Image { get; set; }
 
         public override string ToString()
         {
-            return "{Book: " + Title + " " + PublishingYear + " " + Authors + "}";
+            return "{Książka: " + Title + " " +  Authors + " " + PublishingYear + " " + ISBN + " " + Pages + "}";
         }
+        [NotMapped]
+        public IFormFile ImageUpload { get; set; }
     }
 }
