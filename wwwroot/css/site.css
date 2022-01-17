@@ -1,0 +1,126 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.navbar-brand {
+    padding-right: 5px;
+}
+
+.logo_img {
+    width: 30px;
+    height: 30px;
+}
+
+.user_col {
+    text-align: center;
+}
+
+
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+/*login-container*/
+
+.logo_user {
+    width: 100px;
+    height: 100px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-control:focus {
+    border: 1px solid rgba(130, 195, 66, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(130, 195, 66, 0.25);
+}
+
+.mb-3:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    color: #ffffff;
+    text-align: center;
+    border: 1px #82c342 solid;
+    background-color: #82c342;
+    box-shadow: none;
+}
+
+    .btn:hover {
+        color: #ffffff;
+        border: 1px #7fc241 solid;
+        background-color: #7fc241;
+        box-shadow: 0 0 0 0.25rem rgba(130, 195, 66, 0.25);
+    }
+
+    .btn:focus {
+        color: #ffffff;
+        border: 1px #7fc241 solid;
+        background-color: #7fc241;
+        box-shadow: 0 0 0 0.25rem rgba(130, 195, 66, 0.25);
+    }
+
+    .btn:active:hover {
+        color: #ffffff;
+        box-shadow: 0 0 0 0.25rem rgba(130, 195, 66, 0.25);
+    }
+
+.p_login {
+    text-align: center;
+}
+
+.a_login {
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+    color: #6fc241;
+}
+
+    .a_login:hover {
+        color: #2dc020;
+    }
+/*signUp-container*/
+.p_sign {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.badge {
+    text-align: center;
+    background-color: #7fc241;
+}
+
+.signup_button {
+   display:flex;
+   justify-content:center;
+   align-items:center;
+}
+.logout_btn{
+
+    
+}

@@ -1,0 +1,30 @@
+﻿@model eLibrary.Models.Book
+@*
+   
+*@
+@{
+}
+<div class="container-fluid" m-3>
+    <h2>Wpisz dane kontaktu</h2>
+    <form asp-controller="Book" asp-action="Add" method="post">
+        <div class="mb-3">
+            <span asp-validation-for="Title" class="text-danger"></span>
+            <label asp-for="Title">Tytuł</label>
+            <input class="form-control" asp-for="Title" />
+        </div>
+        <div class="mb-3">
+            <span asp-validation-for="Authors" class="text-danger"></span>
+            <label asp-for="Authors">Autor</label>
+            <input class="form-control" asp-for="Authors" />
+        </div>
+        <div class="mb-3">
+            <span asp-validation-for=" PublishingYear" class="text-danger"></span>
+            <label asp-for=" PublishingYear">Rok Wydania:</label>
+            <input class="form-control" asp-for=" PublishingYear" />
+        </div>
+        
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit">Zapisz</button>
+        </div>
+    </form>
+</div>

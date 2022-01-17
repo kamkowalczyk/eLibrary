@@ -1,0 +1,70 @@
+﻿@model Login
+@{
+ViewData["Title"] = "LoginModel";
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row center">
+                            <div class="user_col">
+                                <img src="../images/user_log.png" alt="user" class="logo_user">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <center>
+                                    <h3>Logowanie</h3>
+                                </center>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <hr>
+                            </div>
+                        </div>
+                        <form method="POST" >
+                            <div class="row">
+                                <div class="col">
+                                    <div class=" mb-4 form-group">
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                        <label asp-for="Email">Email:</label>
+                                        <input class="form-control" asp-for="Email" />
+                                    </div>
+                                    <div class="mb-4 form-group">
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                        <label asp-for="Password">Hasło:</label>
+                                        <input class="form-control" asp-for="Password" type="password" />
+                                    </div>
+                                              @Html.ValidationMessage("CustomError")
+                                              <div class="form-group">
+                                             <div class="checkbox">
+                                  <label asp-for="RememberMe">
+                                  <input asp-for = "RememberMe" />
+                                  @Html.DisplayNameFor(m=>m.RememberMe)
+                                     </label>
+                                     </div>
+                                    <div class="form-group signup_button">
+                                        <input class="btn btn-info btb-block btn-lg" type="submit" value="Zaloguj się" />
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+
+</form>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

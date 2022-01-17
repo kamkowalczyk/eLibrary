@@ -1,0 +1,17 @@
+﻿@model eLibrary.Models.Book
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+<div class="container m-3">
+    <h2>Edycja książki:</h2>
+    <form asp-action="Edit" method="post">
+        <input asp-for="Id" />
+        <label asp-for="Title">Tytuł</label>
+        <input class="form-control" asp-for="Title" />
+        <label asp-for="PublishingYear">Telefon</label>
+        <input class="form-control" asp-for="PublishingYear" />
+        <button class="btn btn-primary">Zapisz zmiany</button>
+    </form>
+</div>
