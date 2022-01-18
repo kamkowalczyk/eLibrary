@@ -333,3 +333,5 @@ C:\Users\Kamil\OneDrive\Pulpit\eLibrary2-main\obj\Debug\net5.0\eLibrary.dll
 C:\Users\Kamil\OneDrive\Pulpit\eLibrary2-main\obj\Debug\net5.0\ref\eLibrary.dll
 C:\Users\Kamil\OneDrive\Pulpit\eLibrary2-main\obj\Debug\net5.0\eLibrary.pdb
 C:\Users\Kamil\OneDrive\Pulpit\eLibrary2-main\obj\Debug\net5.0\eLibrary.genruntimeconfig.cache
+C:\Users\Kamil\OneDrive\Pulpit\eLibrary\bin\Debug\net5.0\PrimeService\obj\PrimeService.csproj.nuget.dgspec.json
+C:\Users\Kamil\OneDrive\Pulpit\eLibrary\bin\Debug\net5.0\PrimeService\obj\project.assets.json
