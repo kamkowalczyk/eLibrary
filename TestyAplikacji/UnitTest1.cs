@@ -1,7 +1,6 @@
 using System;
 using Xunit;
 
-
 namespace TestyAplikacji
 {
     public class UnitTest1
