@@ -145,3 +145,15 @@ C:\Users\Kamil\OneDrive\Pulpit\eLibrary\TestyAplikacji\obj\Debug\net5.0\TestyApl
 C:\Users\Kamil\OneDrive\Pulpit\eLibrary\TestyAplikacji\obj\Debug\net5.0\ref\TestyAplikacji.dll
 C:\Users\Kamil\OneDrive\Pulpit\eLibrary\TestyAplikacji\obj\Debug\net5.0\TestyAplikacji.pdb
 C:\Users\Kamil\OneDrive\Pulpit\eLibrary\TestyAplikacji\obj\Debug\net5.0\TestyAplikacji.genruntimeconfig.cache
+C:\Users\Kamil\OneDrive\Pulpit\eLibrary\TestyAplikacji\bin\Debug\net5.0\PrimeService\obj\PrimeService.csproj.nuget.dgspec.json
+C:\Users\Kamil\OneDrive\Pulpit\eLibrary\TestyAplikacji\bin\Debug\net5.0\PrimeService\obj\project.assets.json
+C:\Users\Kamil\OneDrive\Pulpit\eLibrary\TestyAplikacji\bin\Debug\net5.0\TestyAplikacji\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Kamil\OneDrive\Pulpit\eLibrary\TestyAplikacji\bin\Debug\net5.0\TestyAplikacji\bin\Debug\net5.0\appsettings.json
+C:\Users\Kamil\OneDrive\Pulpit\eLibrary\TestyAplikacji\bin\Debug\net5.0\TestyAplikacji\bin\Debug\net5.0\eLibrary.deps.json
+C:\Users\Kamil\OneDrive\Pulpit\eLibrary\TestyAplikacji\bin\Debug\net5.0\TestyAplikacji\bin\Debug\net5.0\eLibrary.runtimeconfig.dev.json
+C:\Users\Kamil\OneDrive\Pulpit\eLibrary\TestyAplikacji\bin\Debug\net5.0\TestyAplikacji\bin\Debug\net5.0\eLibrary.runtimeconfig.json
+C:\Users\Kamil\OneDrive\Pulpit\eLibrary\TestyAplikacji\bin\Debug\net5.0\TestyAplikacji\bin\Debug\net5.0\TestyAplikacji.deps.json
+C:\Users\Kamil\OneDrive\Pulpit\eLibrary\TestyAplikacji\bin\Debug\net5.0\TestyAplikacji\bin\Debug\net5.0\TestyAplikacji.runtimeconfig.dev.json
+C:\Users\Kamil\OneDrive\Pulpit\eLibrary\TestyAplikacji\bin\Debug\net5.0\TestyAplikacji\bin\Debug\net5.0\TestyAplikacji.runtimeconfig.json
+C:\Users\Kamil\OneDrive\Pulpit\eLibrary\TestyAplikacji\bin\Debug\net5.0\TestyAplikacji\bin\Debug\net5.0\TestyAplikacji\obj\project.assets.json
+C:\Users\Kamil\OneDrive\Pulpit\eLibrary\TestyAplikacji\bin\Debug\net5.0\TestyAplikacji\bin\Debug\net5.0\TestyAplikacji\obj\TestyAplikacji.csproj.nuget.dgspec.json
