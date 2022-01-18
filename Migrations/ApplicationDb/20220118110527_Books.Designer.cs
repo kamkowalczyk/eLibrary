@@ -10,7 +10,7 @@ using eLibrary.Models;
 namespace eLibrary.Migrations.ApplicationDb
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220117170056_Books")]
+    [Migration("20220118110527_Books")]
     partial class Books
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

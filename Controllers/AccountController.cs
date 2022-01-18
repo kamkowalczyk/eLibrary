@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eLibrary.Controllers
 {
-   
+    
     public class AccountController : Controller
     {
         private readonly UserManager<IdentityUser> userManager;
@@ -27,13 +27,16 @@ namespace eLibrary.Controllers
 
   
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Register()
         {
             return View();
         }
 
-        
+
         [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(Register model)
         {
             if (ModelState.IsValid)
@@ -55,16 +58,15 @@ namespace eLibrary.Controllers
         }
 
         [AllowAnonymous]
-
         [HttpGet]
-
         public IActionResult Login()
         {
             return View();
         }
 
+            [HttpPost]
         [AllowAnonymous]
-        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(Login model)
         {
             if (ModelState.IsValid)
