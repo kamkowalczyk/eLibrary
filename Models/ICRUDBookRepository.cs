@@ -20,7 +20,7 @@ namespace eLibrary.Models
 
         IList<Book> FindPage(int page, int size);
 
-        void AddAuthorToBook(int authorId, int bookId);
+        
     }
     public class EFCRUDBookRepository : ICRUDBookRepository
     {
@@ -63,17 +63,15 @@ namespace eLibrary.Models
                 .ToList();
         }
 
-        public void AddAuthorToBook(int authorId, int bookId)
-        {
-           
-            var book = context.Books.Find(bookId);
-          
-            Update(book);
-        }
-
         public Book Update(Book book)
         {
-            EntityEntry<Book> entityEntry = context.Books.Update(book);
+            Book original = context.Books.Find(book.Id);
+            original.Title = book.Title;
+            original.Authors = book.Authors;
+            original.PublishingYear = book.PublishingYear;
+            original.ISBN= book.ISBN;
+            original.Pages = book.Pages;
+            EntityEntry<Book> entityEntry = context.Books.Update(original);
             context.SaveChanges();
             return entityEntry.Entity;
         }

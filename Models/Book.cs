@@ -28,13 +28,12 @@ namespace eLibrary.Models
         [Required(ErrorMessage = "Musisz podać ilość stron!")]
         public int Pages { get; set; }
 
-        public string Image { get; set; }
+   
 
         public override string ToString()
         {
             return "{Książka: " + Title + " " +  Authors + " " + PublishingYear + " " + ISBN + " " + Pages + "}";
         }
-        [NotMapped]
-        public IFormFile ImageUpload { get; set; }
+      
     }
 }

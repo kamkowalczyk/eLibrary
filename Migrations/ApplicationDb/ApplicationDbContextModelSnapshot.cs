@@ -35,9 +35,6 @@ namespace eLibrary.Migrations.ApplicationDb
                         .HasMaxLength(13)
                         .HasColumnType("nvarchar(13)");
 
-                    b.Property<string>("Image")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("Pages")
                         .HasColumnType("int");
 

@@ -1,10 +1,10 @@
 ﻿@model ICollection<eLibrary.Models.Book>
 
 <div class="container-fluid m-3">
-    <h2>Lista dostępnych książek:</h2>
+    <h2>Lista dostępnych książek w bibliotece:</h2>
     <table class="table">
         <tr>
-            <th>Okładka</th>
+            <th></th>
             <th>Tytuł</th>
             <th>Autor</th>
             <th>Rok publikacji</th>
@@ -15,27 +15,29 @@
         </tr>
         @foreach (var book in @Model)
         {
-            <tr>
-                <td>
-                    @book.ImageUpload
-                </td>
-                <td>
-                    @book.Title
-                </td>
-                <td>
-                    @book.Authors
-                </td>
-                <td>
-                    @book.PublishingYear
-                </td>
-                <td>
-                    @book.ISBN
-                </td>
-                <td>
-                    @book.Pages
-                </td>
+    <tr>
+        <td>
+            <div class="center">
+                <img src="~/images/listbook.png" alt="book" class="logo_book" />
+            </div>
+        </td>
+        <td>
+            @book.Title
+        </td>
+        <td>
+            @book.Authors
+        </td>
+        <td>
+            @book.PublishingYear
+        </td>
+        <td>
+            @book.ISBN
+        </td>
+        <td>
+            @book.Pages
+        </td>
 
-            </tr>
+    </tr>
         }
     </table>
 

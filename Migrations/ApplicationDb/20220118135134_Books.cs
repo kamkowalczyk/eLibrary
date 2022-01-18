@@ -17,8 +17,7 @@ namespace eLibrary.Migrations.ApplicationDb
                     Authors = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PublishingYear = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ISBN = table.Column<string>(type: "nvarchar(13)", maxLength: 13, nullable: false),
-                    Pages = table.Column<int>(type: "int", nullable: false),
-                    Image = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Pages = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
