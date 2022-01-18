@@ -10,7 +10,7 @@ using eLibrary.Models;
 namespace eLibrary.Migrations
 {
     [DbContext(typeof(AppIdentityDbContext))]
-    [Migration("20220118152833_Users")]
+    [Migration("20220118170635_Users")]
     partial class Users
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

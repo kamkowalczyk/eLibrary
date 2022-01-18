@@ -1,4 +1,5 @@
-﻿@inject SignInManager<IdentityUser> signInManager;
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> signInManager
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,15 +9,15 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Library.styles.css" asp-append-version="true" />
-    
+
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index">
-                     eBiblioteka WSEI
-                    <img src ="../images/logo_wsei.png" class="logo_img" alt="logo_wsei"/>  
+                    eBiblioteka WSEI
+                    <img src="../images/logo_wsei.png" class="logo_img" alt="logo_wsei" />
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -24,39 +25,37 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                 
-                    
-                <ul class="navbar-nav ml-auto">
+
+
+                    <ul class="navbar-nav ml-auto">
                         @if (signInManager.IsSignedIn(User))
                         {
-                            <li class="nav-item">
-                                <a asp-action="List" asp-controller="book" class="nav-link">Dodaj książki</a>
-                            </li>
+            <li class="nav-item">
+                <a asp-action="List" asp-controller="book" class="nav-link">Dodaj książki</a>
+            </li>
                             <li class="nav-item">
                                 <a asp-action="login" asp-controller="account" class="nav-link">Twoj profil</a>
                             </li>
+                                            <li class="nav-item">
+                                                <form method="post" asp-action="logout" asp-controller="Account">
+                                                    <button type="submit" class=" btn btn-link logout_btn " style="width:auto">
+                                                        Wyloguj @User.Identity.Name
+                                                    </button>
+                                                </form>
+                                            </li>
+ }
+                                        else
+                                        {
                             <li class="nav-item">
-                                <form method="post" asp-action="logout" asp-controller="Account">
-                                    <button type="submit" class=" btn btn-link logout_btn " style="width:auto">
-                                        Wyloguj @User.Identity.Name
-                                    </button>
-                                </form>
-                            </li>
-                            
-                        }
-                        else
-                        {
-                               <li class="nav-item">
                                 <a asp-action="List" asp-controller="Home" class="nav-link">Zobacz listę książek</a>
                             </li>
-                          <li class="nav-item">
-                                <a asp-action="login" asp-controller="account" class="nav-link">Login</a>
-                            </li>
-                            <li class="nav-item">
-                                <a asp-action="register" asp-controller="account" class="nav-link">Register</a>
-                            </li>
-
-                        }
+                               <li class="nav-item">
+                                   <a asp-action="login" asp-controller="account" class="nav-link">Login</a>
+                                       </li>
+                                 <li class="nav-item">
+                               <a asp-action="register" asp-controller="account" class="nav-link">Register</a>
+                                </li>
+}
 
 
                     </ul>
@@ -72,7 +71,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container text-right">
-            &copy; 2022 - eBiblioteka WSEI - Wszelkie prawa zastrzeżone 
+            &copy; 2022 - eBiblioteka WSEI - Wszelkie prawa zastrzeżone
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

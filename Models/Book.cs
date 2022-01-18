@@ -21,9 +21,10 @@ namespace eLibrary.Models
         public string Authors { get; set; }
         [Required(ErrorMessage = "Musisz podać rok publikacji!")]
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:y}")]
         public DateTime PublishingYear { get; set; }
         [Required(ErrorMessage = "Musisz numer ISBN!")]
-        [MinLength(13, ErrorMessage = "ISBN musi mieć 8 cyfr"), MaxLength(13, ErrorMessage = "ISBN musi mieć 8 cyfr")]
+        [MinLength(13, ErrorMessage = "ISBN musi mieć 13 cyfr"), MaxLength(13, ErrorMessage = "ISBN musi mieć 13 cyfr")]
         public string ISBN { get; set; }
         [Required(ErrorMessage = "Musisz podać ilość stron!")]
         public int Pages { get; set; }

@@ -22,12 +22,11 @@ namespace eLibrary.Controllers
         public async Task<IActionResult> Logout()
         {
             await signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "home");
         }
 
-  
+
         [HttpGet]
-       
         public IActionResult Register()
         {
             return View();
@@ -35,8 +34,6 @@ namespace eLibrary.Controllers
 
 
         [HttpPost]
-    
-   
         public async Task<IActionResult> Register(Register model)
         {
             if (ModelState.IsValid)
@@ -57,16 +54,16 @@ namespace eLibrary.Controllers
             return View(model);
         }
 
-      
+
+
         [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
 
-            [HttpPost]
-      
-   
+
+        [HttpPost]
         public async Task<IActionResult> Login(Login model)
         {
             if (ModelState.IsValid)
@@ -78,11 +75,12 @@ namespace eLibrary.Controllers
                 if (res.Succeeded)
                 {
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("list", "book");
+
                 }
 
 
-                ModelState.AddModelError("CustomError", "Nieprawidłowy adres email lub hasło");
+                ModelState.AddModelError("CustomError", "Nieprawidłowy login lub hasło");
 
             }
             return View(model);

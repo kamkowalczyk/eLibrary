@@ -4,10 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace eLibrary.Models
 {
-    public class AppIdentityDbContext : IdentityDbContext<IdentityUser>
+    public class AppIdentityDbContext : IdentityDbContext
     {
         public
        AppIdentityDbContext(DbContextOptions<AppIdentityDbContext> options)
         : base(options) { }
     }
+   
 }
