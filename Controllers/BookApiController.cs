@@ -20,23 +20,23 @@ namespace eLibrary.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Book>>> GetCar()
+        public async Task<ActionResult<IEnumerable<Book>>> GetBook()
         {
             return await _context.Books.ToListAsync();
         }
 
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Book>> GetCar(int id)
+        public async Task<ActionResult<Book>> GetBook(int id)
         {
-            var car = await _context.Books.FindAsync(id);
+            var book = await _context.Books.FindAsync(id);
 
-            if (car == null)
+            if (book == null)
             {
                 return NotFound();
             }
 
-            return car;
+            return book;
         }
 
 
@@ -76,20 +76,20 @@ namespace eLibrary.Controllers
             _context.Books.Add(book);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCar", new { id =book.Id }, book);
+            return CreatedAtAction("GetBook", new { id =book.Id }, book);
         }
 
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBook(int id)
         {
-            var car = await _context.Books.FindAsync(id);
-            if (car == null)
+            var book = await _context.Books.FindAsync(id);
+            if (book == null)
             {
                 return NotFound();
             }
 
-            _context.Books.Remove(car);
+            _context.Books.Remove(book);
             await _context.SaveChangesAsync();
 
             return NoContent();

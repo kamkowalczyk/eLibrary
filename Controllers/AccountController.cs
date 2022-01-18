@@ -27,7 +27,7 @@ namespace eLibrary.Controllers
 
   
         [HttpGet]
-        [AllowAnonymous]
+       
         public IActionResult Register()
         {
             return View();
@@ -35,8 +35,8 @@ namespace eLibrary.Controllers
 
 
         [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
+    
+   
         public async Task<IActionResult> Register(Register model)
         {
             if (ModelState.IsValid)
@@ -47,7 +47,7 @@ namespace eLibrary.Controllers
                 if (res.Succeeded)
                 {
                     await signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("index", "home");
                 }
                 foreach (var error in res.Errors)
                 {
@@ -57,7 +57,7 @@ namespace eLibrary.Controllers
             return View(model);
         }
 
-        [AllowAnonymous]
+      
         [HttpGet]
         public IActionResult Login()
         {
@@ -65,8 +65,8 @@ namespace eLibrary.Controllers
         }
 
             [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
+      
+   
         public async Task<IActionResult> Login(Login model)
         {
             if (ModelState.IsValid)
