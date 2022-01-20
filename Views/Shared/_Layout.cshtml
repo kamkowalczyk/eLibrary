@@ -13,8 +13,9 @@
 </head>
 <body>
     <header>
+
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
+            <div class="container-fluid ">
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index">
                     eBiblioteka WSEI
                     <img src="../images/logo_wsei.png" class="logo_img" alt="logo_wsei" />
@@ -31,16 +32,18 @@
                         @if (signInManager.IsSignedIn(User))
                         {
             <li class="nav-item">
-                <a asp-action="List" asp-controller="book" class="nav-link">Dodaj książki</a>
+                <a asp-action="List" asp-controller="book" class="nav-link">Zarządzaj książkami</a>
             </li>
                                             <li class="nav-item">
                                                 <form method="post" asp-action="logout" asp-controller="Account">
                                                     <button type="submit" class=" btn btn-link logout_btn " style="width:auto">
+                                                        
+                                                        <i class="material-icons">person</i>
                                                         Wyloguj @User.Identity.Name
                                                     </button>
                                                 </form>
                                             </li>
- }
+                                            }
                                         else
                                         {
                             <li class="nav-item">
@@ -52,7 +55,7 @@
                                  <li class="nav-item">
                                <a asp-action="register" asp-controller="account" class="nav-link">Register</a>
                                 </li>
-}
+                                }
 
 
                     </ul>
@@ -60,7 +63,7 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container ">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

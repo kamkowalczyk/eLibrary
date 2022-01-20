@@ -10,7 +10,7 @@ using eLibrary.Models;
 namespace eLibrary.Migrations.ApplicationDb
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220118170706_Books")]
+    [Migration("20220120165159_Books")]
     partial class Books
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,7 +40,8 @@ namespace eLibrary.Migrations.ApplicationDb
                     b.Property<int>("Pages")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("PublishingYear")
+                    b.Property<DateTime?>("PublishingYear")
+                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Title")

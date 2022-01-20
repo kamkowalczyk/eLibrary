@@ -9,10 +9,11 @@ namespace eLibrary.Models
         [HiddenInput]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Email jest wymagany.")]
+        [Required(ErrorMessage = "Email jest wymagany. ")]
         [EmailAddress]
+        [RegularExpression(".+\\@.+\\.[a-z]{2,3}", ErrorMessage = "Niepoprawny adres email!")]
         public string Email { get; set; }
-        [Required(ErrorMessage = "Podaj hasło.")]
+        [Required(ErrorMessage = "Podaj hasło. ")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 

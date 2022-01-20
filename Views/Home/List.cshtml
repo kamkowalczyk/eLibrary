@@ -1,44 +1,53 @@
 ﻿@model ICollection<eLibrary.Models.Book>
+@{ ViewData["Title"] = "List"; }
 
-<div class="container-fluid m-3">
-    <h2>Lista dostępnych książek w bibliotece:</h2>
-    <table class="table">
-        <tr>
-            <th></th>
-            <th>Tytuł</th>
-            <th>Autor</th>
-            <th>Rok publikacji</th>
-            <th>Number ISBN</th>
-            <th>Ilość stron</th>
-            <th></th>
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="htps://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" />
+</head>
+<div class="container-fluid mb-3 mt-3">
+    <h2>Lista dodanych książek:</h2>
+    <table class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Tytuł</th>
+                <th>Autor</th>
+                <th>Rok publikacji</th>
+                <th>Number ISBN</th>
+                <th>Ilość stron</th>
+                
 
-        </tr>
-        @foreach (var book in @Model)
-        {
-    <tr>
-        <td>
-            <div class="center">
-                <img src="~/images/listbook.png" alt="book" class="logo_book" />
-            </div>
-        </td>
-        <td>
-            @book.Title
-        </td>
-        <td>
-            @book.Authors
-        </td>
-        <td>
-            @book.PublishingYear
-        </td>
-        <td>
-            @book.ISBN
-        </td>
-        <td>
-            @book.Pages
-        </td>
+            </tr>
+        </thead>
+        <tbody>
 
-    </tr>
-        }
+            @foreach (var book in @Model)
+            {
+<tr>
+    <td>
+        <div class="center">
+            <img src="~/images/listbook.png" alt="book" class="logo_book" />
+        </div>
+    </td>
+    <td>
+        @book.Title
+    </td>
+    <td>
+        @book.Authors
+    </td>
+    <td>
+        @book.PublishingYear
+    </td>
+    <td>
+        @book.ISBN
+    </td>
+    <td>
+        @book.Pages
+    </td>
+</tr>}
+        </tbody>
     </table>
-
 </div>
+

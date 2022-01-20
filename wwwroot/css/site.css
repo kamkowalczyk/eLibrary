@@ -15,6 +15,13 @@ html {
 
 body {
     margin-bottom: 60px;
+    
+    height: 100%;
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+     
 }
 
 .navbar-brand {
@@ -28,6 +35,7 @@ body {
 
 .user_col {
     text-align: center;
+    padding-bottom:10px;
 }
 
 
@@ -38,7 +46,7 @@ body {
     bottom: 0;
     width: 100%;
     white-space: nowrap;
-    line-height: 60px; /* Vertically center the text there */
+    line-height: 60px; 
     padding-left:300px;
 }
 /*login-container*/
@@ -69,6 +77,8 @@ body {
     border: 1px #82c342 solid;
     background-color: #82c342;
     box-shadow: none;
+    vertical-align: bottom;
+    line-height: 1.40;
 }
 
     .btn:hover {
@@ -125,4 +135,35 @@ body {
     
     width:30px;
     height:30px;
+}
+.logo_bookadd {
+    width:90px;
+    height:90px;
+}
+
+
+.material-icons {
+    color: white;
+    padding-right:3px;
+    line-height: 1.40;
+    float: left;
+    font-size: 17px;
+    vertical-align: bottom;
+}
+
+.gap{
+    margin-left:7px;
+}
+.card-body{
+    padding:20px 35px 15px 35px;
+}
+.btn_save{
+    padding:6px 14px;
+}
+.table, .table-bordered {
+    background:#ffffff;
+    border:none;
+    border-collapse: collapse;
+    border-radius:10px;
+    overflow: hidden;
 }

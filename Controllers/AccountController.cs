@@ -75,7 +75,7 @@ namespace eLibrary.Controllers
                 if (res.Succeeded)
                 {
 
-                    return RedirectToAction("list", "book");
+                    return RedirectToAction("index", "home");
 
                 }
 

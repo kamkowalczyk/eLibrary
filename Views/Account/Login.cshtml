@@ -5,6 +5,7 @@ ViewData["Title"] = "Login";
 
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
 <body>
@@ -34,14 +35,19 @@ ViewData["Title"] = "Login";
                             <div class="row">
                                 <div class="col">
                                     <div class=" mb-4 form-group">
+                                      
                                         <span asp-validation-for="Email" class="text-danger"></span>
+                                       
                                         <label asp-for="Email">Email:</label>
                                         <input class="form-control" asp-for="Email" />
                                     </div>
                                     <div class="mb-4 form-group">
+
                                         <span asp-validation-for="Password" class="text-danger"></span>
+                                      
                                         <label asp-for="Password">Hasło:</label>
                                         <input class="form-control" asp-for="Password" type="password" />
+
                                     </div>
                                               @Html.ValidationMessage("CustomError")
                                               <div class="form-group">

@@ -9,20 +9,20 @@ namespace eLibrary.Models
         [HiddenInput]
         public int Id { get; set; }
         [EmailAddress]
-        [RegularExpression(".+\\@.+\\.[a-z]{2,3}", ErrorMessage = "Niepoprawny adres email!")]
-        [Required(ErrorMessage = "Email jest wymagany.")]
+        [RegularExpression(".+\\@.+\\.[a-z]{2,3}", ErrorMessage = "Niepoprawny adres email! ")]
+        [Required(ErrorMessage = "Email jest wymagany. ")]
         public string Email { get; set; }
-        [Required(ErrorMessage = "Hasło jest wymagane.")]
+        [Required(ErrorMessage = "Hasło jest wymagane. ")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        [Required(ErrorMessage = "Wymagane jest hasło potwierdzające.")]
-        [Compare("Password", ErrorMessage = "Hasła muszą do siebie pasować!")]
+        [Required(ErrorMessage = "Wymagane jest hasło potwierdzające. ")]
+        [Compare("Password", ErrorMessage = "Hasła muszą do siebie pasować! ")]
         public string ConfirmPassword { get; set; }
 
-        [Required(ErrorMessage = "Musisz podać imię.")]
+        [Required(ErrorMessage = "Musisz podać imię. ")]
         public string FirstName { get; set; }
-        [Required(ErrorMessage = "Musisz podać nazwisko.")]
+        [Required(ErrorMessage = "Musisz podać nazwisko. ")]
         public string LastName { get; set; }
        
        

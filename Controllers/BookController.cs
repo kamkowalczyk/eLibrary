@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace eLibrary.Controllers
 {
-
+  
     public class BookController : Controller
     {
         private ICRUDBookRepository repository;
@@ -30,7 +30,6 @@ namespace eLibrary.Controllers
             return View();
         }
         [HttpPost]
-   
         [ValidateAntiForgeryToken]
         public IActionResult Add(Book book)
         {
@@ -48,7 +47,7 @@ namespace eLibrary.Controllers
         {
             return View(repository.FindAll());
         }
-     
+      
         public IActionResult Delete(int id)
         {
             repository.Delete(id);
@@ -60,7 +59,6 @@ namespace eLibrary.Controllers
             return View(repository.FindById(id));
         }
         [HttpPost]
-   
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Book book)
         {

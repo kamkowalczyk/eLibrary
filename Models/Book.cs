@@ -14,19 +14,19 @@ namespace eLibrary.Models
        
         [HiddenInput]
         public int Id { get; set; }
-        [Required(ErrorMessage = "Musisz podać tytuł książki!")]
-        [MinLength(2)]
+        [Required(ErrorMessage = "Musisz podać tytuł książki! ")]
+        [MinLength(2, ErrorMessage = "Tytuł powinien zabierać przynajmniej 2 znaki. ")]
         public string Title { get; set; }
-        [Required(ErrorMessage = "Musisz podać  autora!")]
+        [Required(ErrorMessage = "Musisz podać  autora! ")]
         public string Authors { get; set; }
-        [Required(ErrorMessage = "Musisz podać rok publikacji!")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:y}")]
-        public DateTime PublishingYear { get; set; }
-        [Required(ErrorMessage = "Musisz numer ISBN!")]
-        [MinLength(13, ErrorMessage = "ISBN musi mieć 13 cyfr"), MaxLength(13, ErrorMessage = "ISBN musi mieć 13 cyfr")]
+        [Required(ErrorMessage = "Musisz podać datę publikacji! ")]
+        public DateTime? PublishingYear { get; set; }
+        [Required(ErrorMessage = "Musisz podać numer ISBN!" )]
+        [MinLength(13, ErrorMessage = "ISBN musi mieć 13 cyfr" ), MaxLength(13, ErrorMessage = "ISBN musi mieć 13 cyfr" )]
         public string ISBN { get; set; }
-        [Required(ErrorMessage = "Musisz podać ilość stron!")]
+        [Required(ErrorMessage = "Musisz podać ilość stron!" )]
         public int Pages { get; set; }
 
    

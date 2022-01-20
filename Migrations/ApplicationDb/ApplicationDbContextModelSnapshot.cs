@@ -38,7 +38,8 @@ namespace eLibrary.Migrations.ApplicationDb
                     b.Property<int>("Pages")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("PublishingYear")
+                    b.Property<DateTime?>("PublishingYear")
+                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Title")

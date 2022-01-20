@@ -1,47 +1,77 @@
 ﻿@model eLibrary.Models.Book
-@*
-   
-*@
-@{
-}
-<div class="container-fluid">
-    <h2>Wpisz dane książki:</h2>
-    <form asp-controller="Book" asp-action="Add" method="post">
-        <div class="form-group mb-3">
-            <span asp-validation-for="Title" class="text-danger"></span>
-            <label asp-for="Title">Tytuł:</label>
-            <input class="form-control" asp-for="Title" />
-        </div>
-        <div class="form-group mb-3">
-            <span asp-validation-for="Authors" class="text-danger"></span>
-            <label asp-for="Authors">Autor:</label>
-            <input class="form-control" asp-for="Authors" />
-        </div>
-        <div class="form-group mb-3">
-            <span asp-validation-for=" PublishingYear" class="text-danger"></span>
-            <label asp-for=" PublishingYear">Rok wydania: </label>
-            <input class="form-control" asp-for=" PublishingYear" />
-        </div>
-        <div class="form-group mb-3">
-            <span asp-validation-for=" ISBN" class="text-danger"></span>
-            <label asp-for=" ISBN">Numer ISBN:</label>
-            <input class="form-control" asp-for="ISBN" />
-        </div>
-        <div class="form-group mb-3">
-            <span asp-validation-for="Pages" class="text-danger"></span>
-            <label asp-for="Pages">Ilość stron:</label>
-            <input class="form-control" asp-for="Pages" />
-        </div>
-      
 
-        <div class="mb-3">
-            <button class="btn btn-primary" type="submit">Zapisz</button>
+@{
+ViewData["Title"] = "AddBook";
+}
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-md-7 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row center">
+                            <div class="user_col">
+                                <img src="../images/addbook.png" alt="user" class="logo_bookadd">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class=" center">
+                                    <h3>Dodaj książkę</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="row">
+                            <div class="col">
+                                <hr>
+                            </div>
+                        </div>
+                        <form asp-controller="Book" asp-action="Add" method="post">
+
+                            <div class="row form-group ">
+                                <span asp-validation-for="Title" class="text-danger"></span>
+                                <label asp-for="Title">Tytuł:</label>
+                                <input class="form-control" asp-for="Title" />
+                            </div>
+
+                            <div class="row form-group">
+                                <span asp-validation-for="Authors" class="text-danger"></span>
+                                <label asp-for="Authors">Autor:</label>
+                                <input class="form-control" asp-for="Authors" />
+                            </div>
+                            <div class="row form-group">
+                                <span asp-validation-for=" PublishingYear" class="text-danger"></span>
+                                <label asp-for=" PublishingYear">Rok wydania: </label>
+                                <input class="form-control" asp-for=" PublishingYear" />
+                            </div>
+                            <div class="row form-group">
+                                <span asp-validation-for=" ISBN" class="text-danger"></span>
+                                <label asp-for=" ISBN">Numer ISBN:</label>
+                                <input class="form-control" asp-for="ISBN" />
+                            </div>
+                            <div class="row form-group">
+                                <span asp-validation-for="Pages" class="text-danger"></span>
+                                <label asp-for="Pages">Ilość stron:</label>
+                                <input class="form-control" asp-for="Pages" />
+                            </div>
+                            <div class="mb-3 center form-group ">
+                                <button class="btn btn-primary btn-info btb-block btn-lg btn_save" type="submit"><i class="material-icons">add</i>Dodaj</button>
+                            </div>
+                        </form>
+                        <div class="center form-group ">
+                            <a class="btn btn-primary btn-info btb-block btn-lg btn_save" asp-action="List" asp-controller="Book"><i class="material-icons">arrow_back</i>Wróć do listy książek</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </form>
-    <a class="btn btn-primary" asp-action="List" asp-controller="Book">Wróć do listy książek</a>
-</div>
-<script>
-    $("#ImagePreview").change(function () {
-        readURL(this);
-    });
-</script>
+
+</body>
+</html>
+
+
