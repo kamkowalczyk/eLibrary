@@ -1,5 +1,7 @@
 ﻿@model ICollection<eLibrary.Models.Book>
-@{ ViewData["Title"] = "List"; }
+@{
+ViewData["Title"] = "List";
+}
 
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,7 +19,7 @@
                 <th>Rok publikacji</th>
                 <th>Number ISBN</th>
                 <th>Ilość stron</th>
-                
+           
 
             </tr>
         </thead>
@@ -28,7 +30,7 @@
 <tr>
     <td>
         <div class="center">
-            <img src="~/images/listbook.png" alt="book" class="logo_book" />
+            <img src="~/images/open-book.png" alt="book" class="logo_book" />
         </div>
     </td>
     <td>
@@ -38,6 +40,7 @@
         @book.Authors
     </td>
     <td>
+        
         @book.PublishingYear
     </td>
     <td>
@@ -46,8 +49,11 @@
     <td>
         @book.Pages
     </td>
-</tr>}
+
+</tr>
+}
         </tbody>
+
     </table>
 </div>
 

@@ -32,39 +32,41 @@ ViewData["Title"] = "Login";
                             </div>
                         </div>
                         <form method="post">
+                            <div asp-validation-summary="All" class="text-danger">
                             <div class="row">
                                 <div class="col">
                                     <div class=" mb-4 form-group">
-                                      
+
                                         <span asp-validation-for="Email" class="text-danger"></span>
-                                       
+
                                         <label asp-for="Email">Email:</label>
                                         <input class="form-control" asp-for="Email" />
                                     </div>
                                     <div class="mb-4 form-group">
 
                                         <span asp-validation-for="Password" class="text-danger"></span>
-                                      
+
                                         <label asp-for="Password">Hasło:</label>
                                         <input class="form-control" asp-for="Password" type="password" />
 
                                     </div>
-                                              @Html.ValidationMessage("CustomError")
-                                              <div class="form-group">
-                                             <div class="checkbox">
-                                  <label asp-for="RememberMe">
-                                  <input asp-for = "RememberMe" />
-                                  @Html.DisplayNameFor(m=>m.RememberMe)
-                                     </label>
-                                     </div>
+                                    @Html.ValidationMessage("CustomError")
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label asp-for="RememberMe">
+                                            <input asp-for="RememberMe" />
+                                            @Html.DisplayNameFor(m => m.RememberMe)
+                                        </label>
+                                    </div>
                                     <div class="form-group signup_button">
                                         <input class="btn btn-info btb-block btn-lg" type="submit" value="Zaloguj się" />
                                     </div>
                                 </div>
+                                    </div>
                                 </div>
-                                </div>
+                            </div>
 
-</form>
+                        </form>
                        
                     </div>
                 </div>

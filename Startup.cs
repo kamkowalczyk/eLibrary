@@ -31,13 +31,12 @@ namespace eLibrary
             { options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(
             _ => "Pole jest wymagane! ");
              });
-            services.AddMvc();
+            
             services.AddControllersWithViews();
             services.AddDbContext<ApplicationDbContext>(options =>
            options.UseSqlServer(Configuration.GetConnectionString("AppIdentityDbContext")));
             services.AddTransient<ICRUDBookRepository,EFCRUDBookRepository >();
-            services.AddControllers();
-            services.AddSession();
+           
             services.AddDbContext<AppIdentityDbContext>(options =>
                      options.UseSqlServer(Configuration.GetConnectionString("AppIdentityDbContext")));
             services.AddIdentity<IdentityUser, IdentityRole>()
@@ -62,8 +61,9 @@ namespace eLibrary
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
-            app.UseAuthorization();
             app.UseAuthentication();
+            app.UseAuthorization();
+          
             
 
             app.UseEndpoints(endpoints =>

@@ -24,11 +24,12 @@ namespace eLibrary.Controllers
         {
             return View();
         }
-      
+        [Authorize]
         public IActionResult AddForm()
         {
             return View();
         }
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Add(Book book)
@@ -45,19 +46,22 @@ namespace eLibrary.Controllers
        
         public IActionResult List()
         {
+            
+           
             return View(repository.FindAll());
         }
-      
+        [Authorize]
         public IActionResult Delete(int id)
         {
             repository.Delete(id);
             return View("List", repository.FindAll());
         }
-    
+        [Authorize]
         public IActionResult EditForm(int id)
         {
             return View(repository.FindById(id));
         }
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Book book)
