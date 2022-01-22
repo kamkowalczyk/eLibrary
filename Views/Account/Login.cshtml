@@ -5,8 +5,9 @@ ViewData["Title"] = "Login";
 
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
 </head>
 <body>
     <div class="container-fluid">
@@ -32,7 +33,7 @@ ViewData["Title"] = "Login";
                             </div>
                         </div>
                         <form method="post">
-                            <div asp-validation-summary="All" class="text-danger">
+                            
                             <div class="row">
                                 <div class="col">
                                     <div class=" mb-4 form-group">
@@ -51,11 +52,12 @@ ViewData["Title"] = "Login";
 
                                     </div>
                                     @Html.ValidationMessage("CustomError")
+                                    
                                 <div class="form-group">
-                                    <div class="checkbox">
-                                        <label asp-for="RememberMe">
+                                    <div class="checkbox" id="check">
+                                        <label asp-for="RememberMe" class="remember">
                                             <input asp-for="RememberMe" />
-                                            @Html.DisplayNameFor(m => m.RememberMe)
+                                            Zapamiętaj mnie
                                         </label>
                                     </div>
                                     <div class="form-group signup_button">
@@ -64,7 +66,7 @@ ViewData["Title"] = "Login";
                                 </div>
                                     </div>
                                 </div>
-                            </div>
+                         
 
                         </form>
                        

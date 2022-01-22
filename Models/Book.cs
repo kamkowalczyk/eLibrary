@@ -20,7 +20,7 @@ namespace eLibrary.Models
         [Required(ErrorMessage = "Musisz podać  autora! ")]
         public string Authors { get; set; }
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:y}")]
+        [DisplayFormat(DataFormatString = "{0:yyyy}")]
         [Required(ErrorMessage = "Musisz podać datę publikacji! ")]
         public DateTime? PublishingYear { get; set; }
         [Required(ErrorMessage = "Musisz podać numer ISBN!" )]

@@ -40,8 +40,8 @@ ViewData["Title"] = "List";
         @book.Authors
     </td>
     <td>
-        
-        @book.PublishingYear
+
+        @Html.DisplayFor( modelItem =>book.PublishingYear)
     </td>
     <td>
         @book.ISBN

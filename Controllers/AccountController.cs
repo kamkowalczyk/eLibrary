@@ -23,6 +23,7 @@ namespace eLibrary.Controllers
         {
             await signInManager.SignOutAsync();
             return RedirectToAction("Index", "home");
+          
         }
 
 
