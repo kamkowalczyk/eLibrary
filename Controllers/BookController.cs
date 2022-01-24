@@ -34,6 +34,7 @@ namespace eLibrary.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Add(Book book)
         {
+                
             if (ModelState.IsValid)
             {
                 return View("ConfirmBook", repository.Add(book));
@@ -47,7 +48,7 @@ namespace eLibrary.Controllers
         public IActionResult List()
         {
             
-           
+       
             return View(repository.FindAll());
         }
         [Authorize]
@@ -69,6 +70,10 @@ namespace eLibrary.Controllers
             repository.Update(book);
           
             return View("List", repository.FindAll());
+        }
+        public IActionResult Borrowed()
+        {
+            return View();
         }
     } 
 }

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 html {
     font-size: 14px;
 }
@@ -15,7 +16,6 @@ html {
 
 body {
     margin-bottom: 60px;
-    
     height: 100%;
     background-image: url("../images/background.png");
     background-repeat: no-repeat;
@@ -125,14 +125,12 @@ input[type="checkbox"] {
 
 
 }
-    input[type="checkbox"]:after {
+input[type="checkbox"]:after {
         font-family: "Font Awesome 5 Free";
         content: "\f00c";
         font-size: 50px;
         color: white;
         display: none;
-     
-        z-index: 2500;
     }
 
 input[type="checkbox"]:hover {
@@ -205,6 +203,19 @@ input[type="checkbox"]:hover {
     line-height: 1.40;
    
 }
-    .btn_save i {
+.btn_save i {
         font-size: 17px;
-    }
+}
+.home_page {
+    color: #444444;
+    font-family: 'Lato', sans-serif;
+    background: #ffffff;
+
+}
+.home_page h1{
+    font-size:55px;
+}
+.home_page p {
+  font-size:18px;
+}
+   

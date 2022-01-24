@@ -16,7 +16,7 @@ namespace eLibrary.Models
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        [Required(ErrorMessage = "Wymagane jest hasło potwierdzające. ")]
+        [Required(ErrorMessage = "Potwierdź swoje hasło. ")]
         [Compare("Password", ErrorMessage = "Hasła muszą do siebie pasować! ")]
         public string ConfirmPassword { get; set; }
 

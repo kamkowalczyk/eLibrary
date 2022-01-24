@@ -19,7 +19,8 @@ ViewData["Title"] = "List";
                 <th>Rok publikacji</th>
                 <th>Number ISBN</th>
                 <th>Ilość stron</th>
-           
+                <th></th>
+
 
             </tr>
         </thead>
@@ -27,30 +28,35 @@ ViewData["Title"] = "List";
 
             @foreach (var book in @Model)
             {
-<tr>
-    <td>
-        <div class="center">
-            <img src="~/images/open-book.png" alt="book" class="logo_book" />
-        </div>
-    </td>
-    <td>
-        @book.Title
-    </td>
-    <td>
-        @book.Authors
-    </td>
-    <td>
+            <tr>
+                <td>
+                    <div class="center">
+                        <img src="~/images/open-book.png" alt="book" class="logo_book" />
+                    </div>
+                </td>
+                <td>
+                    @book.Title
+                </td>
+                <td>
+                    @book.Authors
+                </td>
+                <td>
 
-        @Html.DisplayFor(modelItem => book.PublishingYear)
-    </td>
-    <td>
-        @book.ISBN
-    </td>
-    <td>
-        @book.Pages
-    </td>
-
-</tr>
+                    @Html.DisplayFor(modelItem => book.PublishingYear)
+                </td>
+                <td>
+                    @book.ISBN
+                </td>
+                <td>
+                    @book.Pages
+                </td>
+               
+                <td class="center">
+                    <a class="btn btn-primary" asp-controller="Book" asp-action="Borrowed"><i class="material-icons">article</i>Wypożycz</a>
+              
+                </td>
+               
+            </tr>
 }
         </tbody>
 

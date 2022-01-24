@@ -1,3 +1,4 @@
+using eLibrary.Filters;
 using eLibrary.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -63,8 +64,9 @@ namespace eLibrary
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-          
-            
+            app.UseMiddleware<MiddlewareCounter>();
+
+
 
             app.UseEndpoints(endpoints =>
             {

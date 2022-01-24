@@ -1,4 +1,5 @@
-﻿using eLibrary.Models;
+﻿using eLibrary.Filters;
+using eLibrary.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -26,7 +27,8 @@ namespace eLibrary.Controllers
         }
 
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}")]   
+       
         public async Task<ActionResult<Book>> GetBook(int id)
         {
             var book = await _context.Books.FindAsync(id);
@@ -41,7 +43,8 @@ namespace eLibrary.Controllers
 
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCar(int id, Book book)
+      
+        public async Task<IActionResult> PutBook(int id, Book book)
         {
             if (id != book.Id)
             {
