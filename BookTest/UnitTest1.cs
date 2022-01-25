@@ -33,13 +33,7 @@ namespace BookTest
             var controller = new BookController(mock.Object);
             var res = controller.Add(new CreateViewModel() { Id = 1 });
 
-            //res.Should().NotBeNull();
-            //res.Should().BeOfType<RedirectToActionResult>();
-            //res.Should().BeAssignableTo<IActionResult>();
-
-
             mock.Verify(v => v.Add(It.IsAny<Book>()));
-
 
         }
         [Fact]
@@ -50,7 +44,6 @@ namespace BookTest
 
             var mock = new Mock<ICRUDBookRepository>();
             var controller = new BookController(mock.Object);
-
 
             var res = controller.Delete(1);
 
@@ -69,11 +62,7 @@ namespace BookTest
             mock.Setup(v => v.FindById(1)).Returns(book);
             var controller = new BookController(mock.Object);
 
-
             var res = controller.Edit(book2);
-
-
-
 
             mock.Verify(v => v.Update(It.IsAny<Book>()), Times.Once());
         }
