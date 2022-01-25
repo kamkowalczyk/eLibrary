@@ -18,7 +18,7 @@ namespace eLibrary.Models
 
         IList<Book> FindAll();
 
-        IList<Book> FindPage(int page, int size);
+
 
         
     }
@@ -55,13 +55,6 @@ namespace eLibrary.Models
             return context.Books.Find(id);
         }
 
-        public IList<Book> FindPage(int page, int size)
-        {
-            return (from book in context.Books orderby book.Title select book)
-                .Skip(page * size)
-                .Take(size)
-                .ToList();
-        }
 
         public Book Update(Book book)
         {

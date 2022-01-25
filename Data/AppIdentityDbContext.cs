@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace eLibrary.Models
 {
-    public class AppIdentityDbContext : IdentityDbContext
+    public class AppIdentityDbContext : IdentityDbContext<IdentityUser>
     {
         public
        AppIdentityDbContext(DbContextOptions<AppIdentityDbContext> options)
