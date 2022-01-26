@@ -39,12 +39,10 @@ namespace BookTest
         [Fact]
         public void TestDelete()
         {
-
             var book = new Book() { Id = 1 };
 
             var mock = new Mock<ICRUDBookRepository>();
             var controller = new BookController(mock.Object);
-
             var res = controller.Delete(1);
 
 

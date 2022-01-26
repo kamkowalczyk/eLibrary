@@ -25,6 +25,7 @@ namespace eLibrary.Models
         public DateTime? PublishingYear { get; set; }
         [Required(ErrorMessage = "Musisz podać numer ISBN!" )]
         [MinLength(13, ErrorMessage = "ISBN musi mieć 13 cyfr" ), MaxLength(13, ErrorMessage = "ISBN musi mieć 13 cyfr" )]
+        [RegularExpression("^[0-9]+$", ErrorMessage = "To pole powinno zawierać same liczny.  ")]
         public string ISBN { get; set; }
         [Required(ErrorMessage = "Musisz podać ilość stron!" )]
         public int Pages { get; set; }
