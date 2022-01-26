@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ndtbut+dCFPEWZ93XRb4J6D3u54ecMShoI7keI1dszq8/xZy27jb/ZZGRdIPGBj5isHy4vlvE+AmemyAeqp3XQ==",
+  "dgSpecHash": "hA2ceVcsv6CdYG7rf6sIHODUK5vNcL5Wsh6huiZEbi6opFQJujanhIm4i1sIOR62OU2sLKbb4seWwc6T36UeOQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kamil\\OneDrive\\Pulpit\\eLibrary\\eLibrary.csproj",
+  "projectFilePath": "C:\\Users\\Kamil\\OneDrive\\Pulpit\\eLibraryWsei\\eLibrary\\eLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kamil\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\Kamil\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

@@ -9306,11 +9306,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kamil\\OneDrive\\Pulpit\\eLibrary\\eLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\Kamil\\OneDrive\\Pulpit\\eLibraryWsei\\eLibrary\\eLibrary.csproj",
       "projectName": "eLibrary",
-      "projectPath": "C:\\Users\\Kamil\\OneDrive\\Pulpit\\eLibrary\\eLibrary.csproj",
+      "projectPath": "C:\\Users\\Kamil\\OneDrive\\Pulpit\\eLibraryWsei\\eLibrary\\eLibrary.csproj",
       "packagesPath": "C:\\Users\\Kamil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kamil\\OneDrive\\Pulpit\\eLibrary\\obj\\",
+      "outputPath": "C:\\Users\\Kamil\\OneDrive\\Pulpit\\eLibraryWsei\\eLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",
