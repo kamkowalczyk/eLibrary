@@ -580,3 +580,5 @@ C:\Users\Kamil\OneDrive\Pulpit\eLibraryWsei\eLibrary\obj\Debug\net5.0\eLibrary.d
 C:\Users\Kamil\OneDrive\Pulpit\eLibraryWsei\eLibrary\obj\Debug\net5.0\ref\eLibrary.dll
 C:\Users\Kamil\OneDrive\Pulpit\eLibraryWsei\eLibrary\obj\Debug\net5.0\eLibrary.pdb
 C:\Users\Kamil\OneDrive\Pulpit\eLibraryWsei\eLibrary\obj\Debug\net5.0\eLibrary.genruntimeconfig.cache
+C:\Users\Kamil\OneDrive\Pulpit\eLibrary\bin\Debug\net5.0\BookTest\obj\BookTest.csproj.nuget.dgspec.json
+C:\Users\Kamil\OneDrive\Pulpit\eLibrary\bin\Debug\net5.0\BookTest\obj\project.assets.json
