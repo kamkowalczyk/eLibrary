@@ -1,11 +1,13 @@
 Co należy zrobić, aby projekt zadziałał?
 1. Zmienić ścieżkę ConnectionStrings w pliku appsettings.json z "Server=KAMIL\\SQLEXPRESS;Database=eLibrary;Trusted_Connection=True;MultipleActiveResultSets=true" 
 na domyślną bazę danych (Server=(domyślna baza danych)).
+
 Logo WSEI zostało użyte, tylko do celów edukacyjnych.
 W razie jakichkolwiek problemów z projketem prosiłbym o kontakt.
 Z poważaniem,
 Kamil Kowalczyk
 13092
+
 Krótki opis aplikacji:
 Aplikacja symuluje działanie biblioteki. Użytkownik niezalogowany może zobaczyć tylko listę książek i ewentualnie je wypożyczyć.
 Użytkownik zalogowany (admin) może dodawać, edytować lub usuwać książki. Dla ułatwienia został dodany mechanizm rejestracji.
