@@ -6,3 +6,7 @@ W razie jakichkolwiek problemów z projketem prosiłbym o kontakt.
 Z poważaniem,
 Kamil Kowalczyk
 13092
+Krótki opis aplikacji:
+Aplikacja symuluje działanie biblioteki. Użytkownik niezalogowany może zobaczyć tylko listę książek i ewentualnie je wypożyczyć.
+Użytkownik zalogowany (admin) może dodawać, edytować lub usuwać książki.
+Projekt zawiera również walidację formularzy, API oraz testy.
